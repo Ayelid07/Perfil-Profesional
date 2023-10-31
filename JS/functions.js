@@ -81,5 +81,82 @@ Swal.fire({
     icon: 'success',
     title: 'Resultados',
     html: respuesta,
-    background: '#fff'
+    background: '#fff',
+    timer: 1000,
+    showConfirmButton: flase
 });
+
+// ##### OPERADORES LOGICOS Y ESTRUCTURAS CONDICIONALES (i)
+// AND &&(ampersan) con if
+var bool    = false;
+var numeric = 5;
+if(!bool && numeric === 5){ // bool == true, al hacer eso me ahorro escribir esto completo 
+    console.log("Ingresa if: " + bool);
+} 
+else {
+    console.log("Ingresa else: " + bool);
+}
+// En el parcial nos va a poner preguntas sobre js 
+// = asiganar un valo, == igual a, === me mira si el numero y el tipo de dato son iguales
+// OR || con if
+var age = 31;
+if(age == 31 || numeric == "5"){
+    console.log("ingresa if: " + age)
+    age++;
+}
+else{
+    console.log("Ingresa else: " + age)
+}
+console.log(age);
+
+//FOR
+console.log(array_tex.length)// con esto leemos el valor que tiene un vector o array
+for(let i=0; i<array_text.length; i++){
+    console.log(array_tex[i] + (i + 1));// + i, coquetanación
+}
+
+//WHILE
+let j = 0;
+while(j<array_tex.length){
+    console.log(array_tex[j] + (j + 1));
+    j++;
+}
+// DO WHILE
+let w = 0;
+do{
+    console.log(array_tex[j] + (j + 1));
+    w++;
+}while(w<array_tex.length)
+
+// CREAR FUNCIONES
+function load_page(){ // cuando se carga la pagina, va a preguntar en el parcial sobre eventos  
+    alert("Bienvenido a mi sitio web")
+}
+
+var color = "#fff"
+function change_color(){
+    document.body.style.backgroundColor = "red"
+    document.body.style.color = color;
+}
+
+const btn_clear = document.querySelector("#limpiar")
+btn_clear.addEventListener("click", () =>{ //evento de escucha
+    document.body.style.backgroundColor = "white"
+    document.body.style.color = "#000";
+});
+
+//FORMULARIO DE REGISTRO, limpiar por partes pregunta del parcial
+const form_register = document.getElementById("form_register");
+const nombres       = document.getElementById("nombres");
+const apellidos     = document.getElementById("apellidos")
+const validation    = document.getElementById("validation")
+
+form_register.addEventListener("submit", event_name =>{ 
+    event_name.preventDefault();
+    let info = "";
+    if(nombres.ariaValueMax.length <= 2 || apellidos.ariaValueMax.length <= 2 ){
+        info += "Nombres y o apellidos deben ser mayores a 2 letras";
+        validation.style.backgroundColor ;
+    }
+});
+
