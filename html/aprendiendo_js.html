@@ -17,16 +17,17 @@
     <br><br>
     <form id="form_register" autocomplete="off">
         <label for="nombres">Nombres</label>
-        <input type="text" id="nombres" size="30" placeholder="Escriba sus nombres aqui">
+        <input type="text" id="nombres" size="30" placeholder="Escriba sus nombres aqui" onblur="validate()">
         <br>
         <label for="apellidos">Apellidos</label>
-        <input type="text" id="apellidos" size="30" placeholder="Escriba sus apellidos aqui">
+        <input type="text" id="apellidos" size="30" placeholder="Escriba sus apellidos aqui" >
         <br>
         <button type="submit">REGISTRAR</button>
         <button type="reset">LIMPIAR</button>
         <br>
         <p id="validation"></p>
     </form>
+    <button onclick="lim()">Lim</button>
 
     <script src="../JS/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -83,7 +83,7 @@ Swal.fire({
     html: respuesta,
     background: '#fff',
     timer: 1000,
-    showConfirmButton: flase
+    showConfirmButton: false
 });
 
 // ##### OPERADORES LOGICOS Y ESTRUCTURAS CONDICIONALES (i)
@@ -111,7 +111,7 @@ console.log(age);
 
 //FOR
 console.log(array_tex.length)// con esto leemos el valor que tiene un vector o array
-for(let i=0; i<array_text.length; i++){
+for(let i=0; i <array_tex.length; i++){
     console.log(array_tex[i] + (i + 1));// + i, coquetanación
 }
 
@@ -139,8 +139,8 @@ function change_color(){
     document.body.style.color = color;
 }
 
-const btn_clear = document.querySelector("#limpiar")
-btn_clear.addEventListener("click", () =>{ //evento de escucha
+const btn_clear = document.querySelector("#limpiar")//evento de escucha
+btn_clear.addEventListener("click", () => { 
     document.body.style.backgroundColor = "white"
     document.body.style.color = "#000";
 });
@@ -158,5 +158,39 @@ form_register.addEventListener("submit", event_name =>{
         info += "Nombres y o apellidos deben ser mayores a 2 letras";
         validation.style.backgroundColor ;
     }
+    else{
+        accion.style.backgroundColor = "green";
+    }
 });
 
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date.getMonth());
+
+    for(let a=0; a<array_mul.length; a++){
+        console.log(array_mul[a].name);
+    } // solo nos muestra el nombre de un array multidimensional 
+}
+
+function validate(){ // es para que el usuario entienda que no puede hacer nada sin registrarse 
+    alert("funciona");
+    let nombres = document.getElementById("nombres").value;
+    console.log(nombres.length);
+    if(nombres.length > 2){ // identifica si una caja de texto esta vacia o no 
+         document.getElementById("apellidos").disabled = false;
+         document.getElementById("apellidos").focus();
+         //alert(nombres.toUpperCase()); para que el nombre sea mayuscula
+         //alert(nombres.concat("Duarte")); para concatenar tambien utilizamos +
+         //alert(nombres.charAt(2)); sacar un caracter
+        // alert(nombres.indexOf("a")); // para buscar una letra o contar las letras pero me da su posicion de izquierda a derecha
+        //alert(nombres.indexOf("e")); // lo mismo pero de derecha a izquierda
+        alert(nombres.split("")); // me da su nombre completo, convierte en un array 
+
+    }
+}
+
+function lim(){
+    let nombres = document.getElementById("nombres");
+}
