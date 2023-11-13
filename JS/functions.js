@@ -187,6 +187,7 @@ function validate(){ // es para que el usuario entienda que no puede hacer nada 
         // alert(nombres.indexOf("a")); // para buscar una letra o contar las letras pero me da su posicion de izquierda a derecha
         //alert(nombres.indexOf("e")); // lo mismo pero de derecha a izquierda
         alert(nombres.split("")); // me da su nombre completo, convierte en un array 
+        document.getElementById("nombres").value = " ";
 
     }
 }
