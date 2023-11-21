@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="caja_uno" placeholder="Escriba un texto">
+    <input type="text" id="caja_dos" placeholder="Escriba un texto">
+    <div id="print"></div>
+    <button onclick="calculo()">Validar</button>
+
+    <script src="https://cdn.jsdelivir.net/npm/sweetaler2@11"></script>
+    <script>
+        function calculo(){
+            let caja_uno = document.getElementById("caja_uno").value;
+            let caja_dos = document.getElementById("caja_dos").value;
+            let print = " ";
+            for(caja_uno; caja_uno<=caja_dos; caja_uno+=2){
+                print += caja_uno + "/"
+            }
+
+            document.getElementById("print").innerText = print;
+        }
+    </script>
+</body>
+</html>

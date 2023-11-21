@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="caja" placeholder="Escriba un texto">
+    <div id="print"></div>
+    <button onclick="calculo()">Validar</button>
+    <script>
+        function calculo(){
+            let caja = document.getElementById("caja").value;
+            let array = caja.split("");
+            let print = " ";
+            //Primera forma de hacerlo
+          //  for(let i =0; i<array.length; i++){
+                //console.log(array[1]);
+            //    print += array[i] + "<br>"
+            //}
+
+            //alert(array);
+            //document.getElementById("print").innerHTML = print;
+
+           //Segunda forma de hacerlo
+           if(isNaN(caja) == true){
+              for (let i = 0; i<array.length; i++){
+                if (array[i] != "")
+                print += array[]
+              }
+           } else{
+            Swal.fire({
+            title: "The Internet?",
+            text: "That thing is still around?",
+            icon: "question"
+            });
+           }
+
+           console.log(array);
+           document.getElementById("print").innerHTML = print;
+        }
+    </script>
+</body>
+</html>
